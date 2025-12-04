@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
   <img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/Roboflow-6706CE?style=for-the-badge&logo=roboflow&logoColor=white">
   <br>
   <img src="https://img.shields.io/badge/Ultralytics-000000?style=for-the-badge&logo=ultralytics&logoColor=white">
   <img src="https://img.shields.io/badge/YOLOv8-00FFFF?style=for-the-badge&logo=yolo&logoColor=black">
@@ -15,18 +16,24 @@
 # 설계
 
 본 프로젝트는 소형 객체 탐지에 취약한 YOLO 등의 객체탐지 모델을 보완하기 위해 [^1][^2]을 바탕으로 다음과 같은 시스템을 구성했습니다.
+객체 탐지 / 이미지 분류 모델 학습에는 roboflow에서 수집한 데이터셋을 활용했습니다.
 
 <img width="2142" height="513" alt="image" src="https://github.com/user-attachments/assets/0f1b22a1-d37e-4f36-9f33-c64570b0261c" />
 
 # 실험
 
-제작 과정에서 실시간성 개선을 위해 여러가지 모델[^4]을 실험한 결과는 다음과 같습니다. 사용한 데이터셋은 [^3]에서 공개한 ARD-MAV를 사용했습니다. 
+제작 과정에서 실시간성 개선을 위해 여러가지 모델[^4]을 실험한 결과는 다음과 같습니다. 실험에 사용한 데이터셋은 [^3]에서 공개한 ARD-MAV를 사용했습니다. 
 
 <img width="1025" height="190" alt="image" src="https://github.com/user-attachments/assets/48604157-db40-44bd-a1da-bb155cf3982a" />
 
 # 결론 및 향후 과제
 
 모델의 FLOPs(B)를 극단적으로 줄리면서 시행한 실험에서 실시간성 개선이 제한적이었으므로, [^1]의 설계를 따라 전처리 단계에서의 경량화를 우선적으로 수행할 필요성이 있습니다. 또한 실시간성 이외의 정확도 평가는 아직 수행하지 못하였으므로, 추후 본 프로젝트의 객체 추적 + 이미지 분류에 맞는 지표를 찾아 수행하고 개선토록 하겠습니다.
+
+# 참고 파일
+
+사용한 모델의 가중치 파일은 다음에서 확인하실 수 있습니다 :
+[Weights Link](https://drive.google.com/drive/folders/1UdmCQ4xwqR0x-w6LAVv-D80VMCP7yfRm?usp=drive_link)
 
 ## 📚 References
 
